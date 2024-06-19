@@ -3277,6 +3277,17 @@ game:GetService("ReplicatedStorage").Server:InvokeServer(ohTable1)
 	end    
 })
 
+local Section = Tab:AddSection({
+	Name = "Custom Tools"
+})
+
+Tab:AddButton({
+ Name = "Lucky Strike",
+ Callback = function()
+        loadstring("https://raw.githubusercontent.com/ADSKerOffical/AnM-Battlegrounds_LuckyStrike/main/Tool"))()
+   end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Dev ability's",
 	Icon = "rbxassetid://4483345998",
