@@ -3278,13 +3278,20 @@ game:GetService("ReplicatedStorage").Server:InvokeServer(ohTable1)
 })
 
 local Section = Tab:AddSection({
-	Name = "Custom Tools"
+	Name = "Custom Characters"
 })
 
 Tab:AddButton({
- Name = "Lucky Strike",
+ Name = "Ultimate Hakari",
  Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/AnM-Battlegrounds_LuckyStrike/main/Tool"))()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Cyborg",
+ Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/AnM-Battlegrounds_Cyborg/main/Character"))()
    end    
 })
 
