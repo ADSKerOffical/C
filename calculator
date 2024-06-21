@@ -894,7 +894,7 @@ Tab:AddButton({
  Name = "Godmode",
  Callback = function()
 local args = {
-    [1] = "Ayanokoji"
+    [1] = "Ayanokoji Kiyotaka"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -1084,7 +1084,7 @@ Tab:AddLabel("Mugetsu Mode")
 Tab:AddButton({
  Name = "Become Mugetsu v2",
  Callback = function()
-        local ohString1 = "Ichigo"
+        local ohString1 = "Kurosaki Ichigo"
 game:GetService("ReplicatedStorage").Picked:FireServer(ohString1)
 wait(0.2)
 game:GetService("Players").LocalPlayer.Backpack["Final Getsuga Tensho"].LocalScript.Event:FireServer()
@@ -1858,7 +1858,7 @@ Tab:AddButton({
  Callback = function()
 local function SeriousMode()
 local args = {
-    [1] = "Shadow"
+    [1] = "Cid Kagenou"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -1974,7 +1974,7 @@ Tab:AddButton({
  Callback = function()
         local function SeriousMode()
 local args = {
-    [1] = "Shadow"
+    [1] = "Cid Kagenou"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -2121,7 +2121,7 @@ Tab:AddButton({
  Callback = function()
         local function SeriousMode()
 local args = {
-    [1] = "Shadow"
+    [1] = "Cid Kagenou"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -2171,7 +2171,7 @@ Tab:AddButton({
  Callback = function()
         local function SeriousMode()
 local args = {
-    [1] = "Shadow"
+    [1] = "Cid Kagenou"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -2215,7 +2215,7 @@ end
 wait(0.5)
 local function AuraZ()
 local args = {
-    [1] = "Ayanokoji"
+    [1] = "Ayanokoji Kiyotaka"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -2279,7 +2279,7 @@ Tab:AddButton({
  Name = "Mega Zoro",
  Callback = function()
         local args = {
-    [1] = "Zoro"
+    [1] = "Roronoa Zoro"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -2296,7 +2296,7 @@ Tab:AddButton({
  Name = "Reaper",
  Callback = function()
 local args = {
-    [1] = "Asta Demon"
+    [1] = "Asta"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -2325,7 +2325,7 @@ Tab:AddButton({
  Name = "Cursed",
  Callback = function()
  local args = {
-    [1] = "Yuta"
+    [1] = "Yuta Okkotsu"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -2342,7 +2342,7 @@ Tab:AddButton({
  Name = "Mega Giyu",
  Callback = function()
  local args = {
-    [1] = "Giyu"
+    [1] = "Giyu Tomioka"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -2374,7 +2374,7 @@ Tab:AddButton({
  Name = "Punish Player(V)",
  Callback = function()
 local args = {
-    [1] = "Ayanokoji"
+    [1] = "Ayanokoji Kiyotaka"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -2387,7 +2387,7 @@ Tab:AddButton({
  Callback = function()
         local function SeriousMode()
 local args = {
-    [1] = "Shadow"
+    [1] = "Cid Kagenou"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -2431,7 +2431,7 @@ end
 wait(0.5)
 local function AuraZ()
 local args = {
-    [1] = "Ayanokoji"
+    [1] = "Ayanokoji Kiyotaka"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -2647,7 +2647,7 @@ end
 if not hasTool then
   local function F1()
     local args = {
-    [1] = "Gojo"
+    [1] = "Gojo Satoru"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -2694,7 +2694,7 @@ end
 if not hasTool then
   local function F1()
     local args = {
-    [1] = "Gojo"
+    [1] = "Gojo Satoru"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -2740,7 +2740,7 @@ end
 
 if not hasTool then
   local args = {
-    [1] = "Shadow"
+    [1] = "Cid Kagenou"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -2786,7 +2786,7 @@ end
 if not hasTool then
   local function F1()
     local args = {
-    [1] = "Rengoku"
+    [1] = "Kyojuro Rengoku"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -2816,7 +2816,7 @@ end
 
 if not hasTool then
   local args = {
-    [1] = "Zenitsu"
+    [1] = "Zenitsu Agatsuma"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -2838,7 +2838,7 @@ Tab:AddButton({
  Name = "Yuta This Is Pure Love",
  Callback = function()
         local args = {
-    [1] = "Yuta"
+    [1] = "Yuta Okkotsu"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -2868,7 +2868,7 @@ Tab:AddButton({
  Name = "Rengoku Divine Rengoku",
  Callback = function()
         local args = {
-    [1] = "Rengoku"
+    [1] = "Kyojuro Rengoku"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -2927,7 +2927,7 @@ end
 
 if not hasTool then
   local args = {
-    [1] = "Yuji / Sukuna"
+    [1] = "Yuji Itadori"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
@@ -3029,7 +3029,7 @@ Tab:AddButton({
  Name = "Summon Mahoraga",
  Callback = function()
         local args = {
-    [1] = "Megumi / Sukuna"
+    [1] = "Megumi Fushiguro"
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
