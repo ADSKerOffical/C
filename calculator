@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
 
-local Window = OrionLib:MakeWindow({Name = "Budgie Hub | AnM battlegrounds", HidePremium = true, IntroEnabled = false, SaveConfig = false, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Budgie Hub | AnM battlegrounds", HidePremium = true, IntroEnabled = false, SaveConfig = false, ConfigFolder = "OrionTest", IntroText = "Budgie Hub", IntroIcon = "rbxassetid://16336200609"})
 
 local Tab = Window:MakeTab({
 	Name = "Characters",
@@ -2363,24 +2363,24 @@ Tab:AddButton({
    end    
 })
 
-Tab:AddButton({
- Name = "Server breaker(V)",
- Callback = function()
-        loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\65\68\83\75\101\114\79\102\102\105\99\97\108\47\86\105\112\49\47\109\97\105\110\47\65\110\77\34\41\41\40\41\10")()
-   end    
-})
+-- Tab:AddButton({
+--  Name = "Server breaker(V)",
+--  Callback = function()
+--         loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\65\68\83\75\101\114\79\102\102\105\99\97\108\47\86\105\112\49\47\109\97\105\110\47\65\110\77\34\41\41\40\41\10")()
+--    end    
+-- })
 
-Tab:AddButton({
- Name = "Punish Player(V)",
- Callback = function()
-local args = {
-    [1] = "Ayanokoji Kiyotaka"
-}
+-- Tab:AddButton({
+--  Name = "Punish Player(V)",
+--  Callback = function()
+-- local args = {
+--     [1] = "Ayanokoji Kiyotaka"
+-- }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
-loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\65\68\83\75\101\114\79\102\102\105\99\97\108\47\86\105\112\50\47\109\97\105\110\47\65\110\77\34\41\41\40\41\10")()
-   end    
-})
+-- game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
+-- loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\34\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\65\68\83\75\101\114\79\102\102\105\99\97\108\47\86\105\112\50\47\109\97\105\110\47\65\110\77\34\41\41\40\41\10")()
+--    end    
+-- })
 
 Tab:AddButton({
  Name = "Super Rage Mode",
@@ -2834,35 +2834,21 @@ end
    end    
 })
 
-Tab:AddButton({
- Name = "Yuta This Is Pure Love",
- Callback = function()
-        local args = {
-    [1] = "Yuta Okkotsu"
-}
+-- Tab:AddButton({
+--  Name = "Yuta This Is Pure Love",
+--  Callback = function()
+--         local args = {
+--     [1] = "Yuta Okkotsu"
+-- }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
+-- game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
 
-wait(0.4)
-local LP = game.Players.LocalPlayer
-repeat wait() until LP.Character
-for i,v in pairs(LP.Backpack:GetChildren()) do
-   if v.Name == "Rika" then
-       v.Parent = LP.Character
-   end
-end
-for i, v in pairs(LP.Character:GetChildren()) do
-        if v:IsA("Tool") and v.Name == "Rika" then
-            v:Activate()
-        end
-    end
-
-wait(0.5)
-for i = 1, 200 do
-game:GetService("Players").LocalPlayer.Backpack["This Is Pure Love"].Script.Event:FireServer()
-end
-   end    
-})
+-- wait(0.5)
+-- for i = 1, 200 do
+-- game:GetService("Players").LocalPlayer.Backpack["This Is Pure Love"].Script.Event:FireServer()
+-- end
+--    end    
+-- })
 
 Tab:AddButton({
  Name = "Rengoku Divine Rengoku",
@@ -3065,6 +3051,84 @@ Tab:AddButton({
  Callback = function()
         game:GetService("ReplicatedStorage"):WaitForChild("Chainsaw_Man_RS_Folder"):WaitForChild("Remotes"):WaitForChild("Transform_RE"):FireServer()
    end    
+})
+
+    Tab:AddDropdown({
+	Name = "20-20-20 Dropkick",
+	Default = "1",
+	Options = {"Collaretal Ruin", "Powerful Collaretal Ruin"},
+	Callback = function(Value)
+		if Value == "Collaretal Ruin" then
+local user = game.Players.LocalPlayer
+if user.UserId == 5199937747 or user.UserId == 5042713445 or user.UserId == 6036506267 then
+		game:GetService("ReplicatedStorage").Kj.Remotes["Collaretal Ruin"]:FireServer()
+else
+OrionLib:MakeNotification({
+	Name = "Budgie Hub",
+	Content = "Insufficient rights",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+end
+		elseif Value == "Powerful Collaretal Ruin" then
+local user = game.Players.LocalPlayer
+if user.UserId == 5199937747 or user.UserId == 5042713445 or user.UserId == 6036506267 then
+		local function ui()
+    local counte = 1
+    repeat wait(0.5)
+        counte = counte + 1
+        local player = game.Players.LocalPlayer
+        local parts = workspace:GetPartBoundsInRadius(player.Character:WaitForChild("HumanoidRootPart").Position, 80)
+        local foundEntity = false
+        for _, part in ipairs(parts) do
+            if (part:IsA("BasePart") or part:IsA("UnionOperation") or part:IsA("Model")) and not part.Anchored and part:IsDescendantOf(workspace) and not part:IsDescendantOf(player.Character) then
+                foundEntity = true
+                if part then
+                    player.Character:SetPrimaryPartCFrame(part.CFrame)
+                end
+                break
+            end
+        end
+        if foundEntity then
+            -- Do something when an entity is found
+        else
+            -- Do something when no entity is found
+        end
+    until counte == 10
+end
+
+local function increaseSpeed()
+    local player = game:GetService("Players").LocalPlayer
+    local character = player.Character
+    local humanoid = character:FindFirstChildWhichIsA("Humanoid")
+
+    local count = 1
+    repeat task.wait()
+        count = count + 1
+        humanoid.WalkSpeed = 400
+    until count == 210
+    wait()
+    humanoid.WalkSpeed = 16
+end
+
+                for i = 1, 8 do
+    game:GetService("ReplicatedStorage").Kj.Remotes["Collaretal Ruin"]:FireServer()
+end
+
+wait(2)
+
+coroutine.wrap(ui)()
+coroutine.wrap(increaseSpeed)()
+else
+OrionLib:MakeNotification({
+	Name = "Budgie Hub",
+	Content = "Insufficient rights",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+end
+		end
+	end    
 })
 
     Tab:AddDropdown({
