@@ -3054,7 +3054,7 @@ Tab:AddButton({
 })
 
     Tab:AddDropdown({
-	Name = "20-20-20 Dropkick",
+	Name = "Collaretal Ruin",
 	Default = "1",
 	Options = {"Collaretal Ruin", "Powerful Collaretal Ruin"},
 	Callback = function(Value)
@@ -3073,52 +3073,10 @@ end
 		elseif Value == "Powerful Collaretal Ruin" then
 local user = game.Players.LocalPlayer
 if user.UserId == 5199937747 or user.UserId == 5042713445 or user.UserId == 6036506267 then
-		local function ui()
-    local counte = 1
-    repeat wait(0.5)
-        counte = counte + 1
-        local player = game.Players.LocalPlayer
-        local parts = workspace:GetPartBoundsInRadius(player.Character:WaitForChild("HumanoidRootPart").Position, 80)
-        local foundEntity = false
-        for _, part in ipairs(parts) do
-            if (part:IsA("BasePart") or part:IsA("UnionOperation") or part:IsA("Model")) and not part.Anchored and part:IsDescendantOf(workspace) and not part:IsDescendantOf(player.Character) then
-                foundEntity = true
-                if part then
-                    player.Character:SetPrimaryPartCFrame(part.CFrame)
-                end
-                break
-            end
-        end
-        if foundEntity then
-            -- Do something when an entity is found
-        else
-            -- Do something when no entity is found
-        end
-    until counte == 10
-end
-
-local function increaseSpeed()
-    local player = game:GetService("Players").LocalPlayer
-    local character = player.Character
-    local humanoid = character:FindFirstChildWhichIsA("Humanoid")
-
-    local count = 1
-    repeat task.wait()
-        count = count + 1
-        humanoid.WalkSpeed = 400
-    until count == 210
-    wait()
-    humanoid.WalkSpeed = 16
-end
 
                 for i = 1, 8 do
     game:GetService("ReplicatedStorage").Kj.Remotes["Collaretal Ruin"]:FireServer()
 end
-
-wait(2)
-
-coroutine.wrap(ui)()
-coroutine.wrap(increaseSpeed)()
 else
 OrionLib:MakeNotification({
 	Name = "Budgie Hub",
