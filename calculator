@@ -1180,10 +1180,10 @@ Tab:AddDropdown({
 	Name = "Input Character",
 	Default = "1",
 	Options = {
-		"Gojo Young", "Yuji / Sukuna", "Toji", "Denji", "Goku Black", "Muichiro", "Akaza", "Zenitsu", 
-		"Tanjiro Sun", "Rengoku", "Garou", "Giyu", "Saitama", "Gyutaro", "Sakuya", "Gojo", "Goku Ultra", 
-		"Zoro", "Yuta", "Luffy", "Shadow", "Kenjaku", "Vergil", "Megumi / Sukuna", "Green Hero", 
-		"Asta Demon", "Hakari", "Ichigo Vasto Lorde", "Ayanokoji", "Manjiro", "Ichigo"
+		"Gojo Young", "Yuji Itadori", "Toji Fushiguro", "Denji", "Goku Black", "Muichiro Tokito", "Akaza", "Zenitsu Agatsuma", 
+		"Kamado Tanjiro", "Kyojuro Rengoku", "Garou", "Giyu Tomioka", "Saitama", "Gyutaro", "Sakuya Izayoi", "Gojo Satoru", "Goku Ultra", 
+		"Roronoa Zoro", "Yuta Okkotsu", "MK D Luffy", "Cid Kagenou", "Kenjaku", "Vergil", "Megumi Fushiguro", "Green Hero", 
+		"Asta", "Kinji Hakari", "Ichigo Vasto Lorde", "Ayanokoji Kiyotaka", "Sano Manjiro", "Kurosaki Ichigo"
 	},
 	Callback = function(Value)
 		local args = { Value }
