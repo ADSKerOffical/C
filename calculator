@@ -567,11 +567,17 @@ end
    end    
 })
 
-Tab:AddButton({
-	Name = "Transformation",
-	Callback = function()
-      		game:GetService("ReplicatedStorage"):WaitForChild("Domainthing"):FireServer()
-  	end    
+Tab:AddDropdown({
+	Name = "Domain Expansion",
+	Default = "1",
+	Options = {"Luck", "Unluck"},
+	Callback = function(Value)
+	   if Value == "Luck" then
+	game:GetService("ReplicatedStorage").Remotes.IdleDeathGamble:FireServer()
+	elseif Value == "Unluck" then
+	game:GetService("ReplicatedStorage").Remotes.IdleDeathGambleFail:FireServer()
+	   end
+	end    
 })
 
 Tab:AddButton({
@@ -3454,6 +3460,34 @@ end
       end
 })
 
+Tab:AddDropdown({
+	Name = "Collaretal Ruin",
+	Default = "1",
+	Options = {"Basic", "Powerful"},
+	Callback = function(Value)
+		if Value == "Basic" then
+		game:GetService("ReplicatedStorage").Kj.Remotes["Collaretal Ruin"]:FireServer()
+		elseif Value == "Powerful" then
+   for i = 1, 10 do
+   game:GetService("ReplicatedStorage").Kj.Remotes["Collaretal Ruin"]:FireServer()
+   end
+		end
+	end    
+})
+
+Tab:AddButton({
+ Name = "Old Domain Hakari",
+ Callback = function()
+        game:GetService("ReplicatedStorage").Domainthing:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Mahito Domain",
+ Callback = function()
+        game:GetService("ReplicatedStorage").MahitoDomainExpansion.MahitoDomainEvent:FireServer()
+   end    
+})
 
 Tab:AddButton({
  Name = "Beta Replication",
