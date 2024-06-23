@@ -3323,6 +3323,13 @@ Tab:AddButton({
    end    
 })
 
+Tab:AddButton({
+ Name = "Memeus(Beta)",
+ Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/AnM-Battlegrounds_Memeus/main/Character"))()
+   end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Dev ability's",
 	Icon = "rbxassetid://4483345998",
