@@ -2840,21 +2840,12 @@ end
    end    
 })
 
--- Tab:AddButton({
---  Name = "Yuta This Is Pure Love",
---  Callback = function()
---         local args = {
---     [1] = "Yuta Okkotsu"
--- }
-
--- game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
-
--- wait(0.5)
--- for i = 1, 200 do
--- game:GetService("Players").LocalPlayer.Backpack["This Is Pure Love"].Script.Event:FireServer()
--- end
---    end    
--- })
+Tab:AddButton({
+ Name = "<p><font size='20'>Error 404: Failed to load button</font></p>",
+ Callback = function()
+error("Defunct term")
+   end    
+})
 
 Tab:AddButton({
  Name = "Rengoku Divine Rengoku",
