@@ -255,6 +255,15 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+ Name = "Powerful Rushed",
+ Callback = function()
+        for i = 1, 20 do
+game:GetService("Players").LocalPlayer.Backpack.Rushed.LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
  Name = "Unlimited Void 0,2",
  Callback = function()
         game:GetService("Players").LocalPlayer.Backpack["Unlimited Void 0,2s"].Domain.Event:FireServer()
@@ -275,15 +284,6 @@ Tab:AddButton({
  Callback = function()
         for i = 1, 10 do
 game:GetService("Players").LocalPlayer.Backpack["Black Flash"].BlackFlash.Event:FireServer()
-end
-   end    
-})
-
-Tab:AddButton({
- Name = "Powerful Rushed",
- Callback = function()
-        for i = 1, 20 do
-game:GetService("Players").LocalPlayer.Backpack.Rushed.LocalScript.Event:FireServer()
 end
    end    
 })
