@@ -9,9 +9,37 @@ local Tab = Window:MakeTab({
 })
 
 local Section = Tab:AddSection({
-	Name = "Gota (New character, you can't find it in list of character. Just go to 2nd tab, and in Input Characters select Gota)"
+	Name = "Gota (New character, you can't find it in list of character)"
 })
 
+Tab:AddLabel("Press all buttons below to activate Gota")
+Tab:AddLabel("And press the buttons in order, it's important!")
+
+Tab:AddButton({
+ Name = "Select Yuta Okkotsu",
+    Callback = function()
+                local args = { "Yuta Okkotsu" }
+            game:GetService("ReplicatedStorage").Picked:FireServer(unpack(args))
+   end    
+})
+
+Tab:AddButton({
+ Name = "Use Mimicry",
+    Callback = function()
+            for i = 1, 30 do
+                game:GetService("Players").LocalPlayer.Backpack.Mimicry.Script.Event:FireServer()
+            end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Use Gota",
+    Callback = function()
+            game:GetService("Players").LocalPlayer.Backpack.Gojo.Script.Event:FireServer()
+   end    
+})
+
+Tab:AddLabel("You don't need press buttons below, if you want to select Gota")
 
 Tab:AddButton({
  Name = "Powerful Fury Barrage",
@@ -51,11 +79,9 @@ end
 })
 
 Tab:AddButton({
- Name = "Powerful Imaginary Technique Purple",
+ Name = "Imaginary Technique: Purple",
  Callback = function()
-        for i = 1, 5 do
 game:GetService("Players").LocalPlayer.Backpack["Imaginary Technique Purple"].murasaki.Event:FireServer()
-end
    end    
 })
 
@@ -81,7 +107,6 @@ Tab:AddButton({
 game:GetService("Players").LocalPlayer.Backpack["Unlimited Void"].Skill.InfinityVoid:FireServer()
    end    
 })
-
 
 local Section = Tab:AddSection({
 	Name = "Gojo Young"
