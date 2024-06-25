@@ -9,6 +9,81 @@ local Tab = Window:MakeTab({
 })
 
 local Section = Tab:AddSection({
+	Name = "Gota (New character, you can't find it in list of character. Just go to 2nd tab, and in Input Characters select Gota)"
+})
+
+
+Tab:AddButton({
+ Name = "Powerful Fury Barrage",
+ Callback = function()
+        for i = 1, 10 do
+
+game:GetService("Players").LocalPlayer.Backpack["Fury Barrage"].LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Technique Pull",
+ Callback = function()
+        for i = 1, 15 do
+game:GetService("Players").LocalPlayer.Backpack["Technique Pull"].Blue.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Lapse Blue",
+ Callback = function()
+        for i = 1, 30 do
+game:GetService("Players").LocalPlayer.Backpack["Lapse Blue"].LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Reversal Red",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Reversal Red"].LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Imaginary Technique Purple",
+ Callback = function()
+        for i = 1, 5 do
+game:GetService("Players").LocalPlayer.Backpack["Imaginary Technique Purple"].murasaki.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Hollow Purple",
+    Callback = function()
+game:GetService("Players").LocalPlayer.Backpack["Hollow Purple"].LocalScript.event:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Reverse Cursed Technique",
+    Callback = function()
+        for i = 1, 5 do
+game:GetService("Players").LocalPlayer.Backpack["Reverse Cursed Technique"].Script.Event:FireServer()
+        end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Domain Expansion: Unlimited Void",
+    Callback = function()
+game:GetService("Players").LocalPlayer.Backpack["Unlimited Void"].Skill.InfinityVoid:FireServer()
+   end    
+})
+
+
+local Section = Tab:AddSection({
 	Name = "Gojo Young"
 })
 
@@ -162,13 +237,6 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
- Name = "Infinity Void",
- Callback = function()
-        game:GetService("Players").LocalPlayer.Backpack["Infinity Void"].Skill.InfinityVoid:FireServer()
-   end    
-})
-
-Tab:AddButton({
  Name = "Six Eyes",
  Callback = function()
         game:GetService("Players").LocalPlayer.Backpack["Six Eyes"].Script.Event:FireServer()
@@ -182,6 +250,15 @@ Tab:AddButton({
  Callback = function()
         for i = 1, 10 do
 game:GetService("Players").LocalPlayer.Backpack["Black Flash"].BlackFlash.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Rushed",
+ Callback = function()
+        for i = 1, 20 do
+game:GetService("Players").LocalPlayer.Backpack.Rushed.LocalScript.Event:FireServer()
 end
    end    
 })
