@@ -1260,18 +1260,29 @@ end
 })
 
 Tab:AddDropdown({
-	Name = "Input Character",
-	Default = "1",
-	Options = {
-		"Gojo Young", "Yuji Itadori", "Toji Fushiguro", "Denji", "Goku Black", "Muichiro Tokito", "Akaza", "Zenitsu Agatsuma", 
-		"Kamado Tanjiro", "Kyojuro Rengoku", "Garou", "Giyu Tomioka", "Saitama", "Gyutaro", "Sakuya Izayoi", "Gojo Satoru", "Goku Ultra", 
-		"Roronoa Zoro", "Yuta Okkotsu", "MK D Luffy", "Cid Kagenou", "Kenjaku", "Vergil", "Megumi Fushiguro", "Green Hero", 
-		"Asta", "Kinji Hakari", "Ichigo Vasto Lorde", "Ayanokoji Kiyotaka", "Sano Manjiro", "Kurosaki Ichigo"
-	},
-	Callback = function(Value)
-		local args = { Value }
-		game:GetService("ReplicatedStorage").Picked:FireServer(unpack(args))
-	end
+    Name = "Input Character",
+    Default = "1",
+    Options = {
+        "Gota", "Gojo Young", "Yuji Itadori", "Toji Fushiguro", "Denji", "Goku Black", "Muichiro Tokito", "Akaza", "Zenitsu Agatsuma",
+        "Kamado Tanjiro", "Kyojuro Rengoku", "Garou", "Giyu Tomioka", "Saitama", "Gyutaro", "Sakuya Izayoi", "Gojo Satoru", "Goku Ultra",
+        "Roronoa Zoro", "Yuta Okkotsu", "MK D Luffy", "Cid Kagenou", "Kenjaku", "Vergil", "Megumi Fushiguro", "Green Hero",
+        "Asta", "Kinji Hakari", "Ichigo Vasto Lorde", "Ayanokoji Kiyotaka", "Sano Manjiro", "Kurosaki Ichigo"
+    },
+    Callback = function(Value)
+        if Value == "Gota" then
+            local args = { "Yuta Okkotsu" }
+            game:GetService("ReplicatedStorage").Picked:FireServer(unpack(args))
+            wait(0.2)
+            for i = 1, 30 do
+                game:GetService("Players").LocalPlayer.Backpack.Mimicry.Script.Event:FireServer()
+            end
+            wait(1)
+            game:GetService("Players").LocalPlayer.Backpack.Gojo.Script.Event:FireServer()
+        else
+            local args = { Value }
+            game:GetService("ReplicatedStorage").Picked:FireServer(unpack(args))
+        end
+    end
 })
 
 
