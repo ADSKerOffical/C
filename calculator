@@ -1655,10 +1655,14 @@ local Tab = Window:MakeTab({
 	PremiumOnly = false
 })
 
+local lastPressTime = 0
 Tab:AddButton({
  Name = "Kill mode",
  Callback = function()
-        for i = 1, 5 do
+  local currentTime = tick()
+            if currentTime - lastPressTime >= 3 then
+                lastPressTime = currentTime 
+                for i = 1, 5 do
 game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("MalevolentShrine"):FireServer()
 end
 wait()
@@ -1691,6 +1695,14 @@ for _, player in ipairs(players) do
     end
 end
    end
+            else
+                OrionLib:MakeNotification({
+ Name = "Budgie Hub",
+ Content = "Too fast please wait",
+ Image = "rbxassetid://4483345998",
+ Time = 5
+})
+            end
    end    
 })
 
@@ -3546,6 +3558,7 @@ Tab:AddButton({
    end    
 })
 
+local lastPressTime = 0
 Tab:AddDropdown({
 	Name = "MalevolentShine2",
 	Default = "1",
@@ -3555,9 +3568,20 @@ Tab:AddDropdown({
 		game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("MalevolentShrine2"):FireServer()
 		end
 		if Value == "Powerful MalevolentShine2" then
-		for i = 1, 15 do
+  local currentTime = tick()
+            if currentTime - lastPressTime >= 2 then
+                lastPressTime = currentTime 
+                for i = 1, 15 do
 		game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("MalevolentShrine2"):FireServer()
 		end
+            else
+                OrionLib:MakeNotification({
+ Name = "Budgie Hub",
+ Content = "Too fast please wait",
+ Image = "rbxassetid://4483345998",
+ Time = 5
+})
+            end
 		end
 	end    
 })
@@ -3668,6 +3692,114 @@ Tab:AddButton({
  Callback = function()
         game:GetService("ReplicatedStorage").MahitoDomainExpansion.MahitoDomainEvent:FireServer()
    end    
+})
+
+Tab:AddDropdown({
+	Name = "Ultra Beatdown",
+	Default = "",
+	Options = {"Basic", "Powerful"},
+	Callback = function(Value)
+		if Value == "Basic" then
+game:GetService("ReplicatedStorage").Idk:FireServer()
+		else
+		for i = 1, 5 do
+game:GetService("ReplicatedStorage").Idk:FireServer()
+end
+		end
+	end    
+})
+
+Tab:AddButton({
+ Name = "Atomic Slash",
+ Callback = function()
+        game:GetService("ReplicatedStorage").CidKageeno.Blinkk:FireServer()
+   end    
+})
+
+Tab:AddDropdown({
+	Name = "Sukuna2 rush",
+	Default = "1",
+	Options = {"Basic", "Powerful"},
+	Callback = function(Value)
+	     if Value == "Basic" then
+game:GetService("ReplicatedStorage").sukuna.remotes.rush:FireServer()
+	else
+	for i = 1, 9 do
+game:GetService("ReplicatedStorage").sukuna.remotes.rush:FireServer()
+end
+	    end
+	end    
+})
+
+Tab:AddDropdown({
+	Name = "Sukuna2 dismantle",
+	Default = "",
+	Options = {"Basic", "Powerful"},
+	Callback = function(Value)
+		if Value == "Basic" then
+game:GetService("ReplicatedStorage").sukuna.remotes.dismantle:FireServer()
+		else
+		for i = 1, 15 do
+game:GetService("ReplicatedStorage").sukuna.remotes.dismantle:FireServer()
+end
+		end
+	end    
+})
+
+Tab:AddButton({
+ Name = "20-20-20 dropkick 2",
+ Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.Skill.KJ.Dropkick:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Troll",
+ Callback = function()
+        game:GetService("ReplicatedStorage").Remote.Troll:FireServer()
+   end    
+})
+
+Tab:AddDropdown({
+	Name = "Colovo",
+	Default = "",
+	Options = {"Basic", "Powerful"},
+	Callback = function(Value)
+		if Value == "Basic" then
+game:GetService("ReplicatedStorage").Remotes.colovo:FireServer()
+		else
+	for i = 1, 15 do
+	game:GetService("ReplicatedStorage").Remotes.colovo:FireServer()
+	end
+		end
+	end    
+})
+
+local lastPressTime = 0
+Tab:AddDropdown({
+	Name = "Malevolent Shrine 3",
+	Default = "",
+	Options = {"Basic", "Powerful"},
+	Callback = function(Value)
+		if Value == "Basic" then
+	game:GetService("ReplicatedStorage").Events.shrine:FireServer()
+		else
+	local currentTime = tick()
+            if currentTime - lastPressTime >= 2 then
+                lastPressTime = currentTime 
+                for i = 1, 10 do
+                   game:GetService("ReplicatedStorage").Events.shrine:FireServer()
+                end
+            else
+                OrionLib:MakeNotification({
+ Name = "Budgie Hub",
+ Content = "Too fast please wait",
+ Image = "rbxassetid://4483345998",
+ Time = 5
+})
+            end
+        end
+	end    
 })
 
 Tab:AddButton({
