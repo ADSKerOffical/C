@@ -1216,6 +1216,151 @@ end
    end    
 })
 
+local Section = Tab:AddSection({
+ Name = "Mahito"
+})
+
+Tab:AddButton({
+ Name = "Powerful Twister Claw",
+ Callback = function()
+        for i = 1, 20 do
+game:GetService("Players").LocalPlayer.Backpack["Twister Claw"].LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Soul Bend",
+ Callback = function()
+        for i = 1, 20 do
+game:GetService("Players").LocalPlayer.Backpack["Soul Bend"].Move.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful True Curse",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["True Curse"].LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Domain Expansion",
+ Callback = function()
+        game:GetService("ReplicatedStorage").MahitoDomainExpansion.MahitoDomainEvent:FireServer()
+   end    
+})
+
+local Section = Tab:AddSection({
+ Name = "Aizen"
+})
+
+Tab:AddButton({
+ Name = "Powerful Raioko",
+ Callback = function()
+        for i = 1, 15 do
+game:GetService("Players").LocalPlayer.Backpack.Raikoho.LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Flash Slash",
+ Callback = function()
+        for i = 1, 30 do
+game:GetService("Players").LocalPlayer.Backpack["Flash Slash"].LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Multi Hit",
+ Callback = function()
+        for i = 1, 15 do
+game:GetService("Players").LocalPlayer.Backpack["Multi Hit"].LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Kurohitsugi",
+ Callback = function()
+        for i = 1, 15 do
+game:GetService("Players").LocalPlayer.Backpack.Kurohitsugi.LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddToggle({
+ Name = "Eternal Cure",
+ Default = false,
+ Callback = function(Value)
+  ggh = Value
+ while ggh do
+   wait()
+   if game.Players.LocalPlayer.Character.Humanoid.Health ~= game.Players.LocalPlayer.Character.Humanoid.MaxHealth then
+game:GetService("Players").LocalPlayer.Backpack.Heal.Script.Event:FireServer()
+  end
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Tools Pack",
+ Callback = function()
+        local tool = Instance.new("Tool")
+tool.Name = "Powerful Raioko"
+tool.RequiresHandle = false
+
+tool.Activated:Connect(function()
+for i = 1, 15 do
+game:GetService("Players").LocalPlayer.Backpack.Raikoho.LocalScript.Event:FireServer()
+end
+end)
+
+tool.Parent = game.Players.LocalPlayer.Backpack
+
+local tool = Instance.new("Tool")
+tool.Name = "Powerful Flash Slash"
+tool.RequiresHandle = false
+
+tool.Activated:Connect(function()
+for i = 1, 30 do
+game:GetService("Players").LocalPlayer.Backpack["Flash Slash"].LocalScript.Event:FireServer()
+end
+end)
+
+tool.Parent = game.Players.LocalPlayer.Backpack
+
+local tool = Instance.new("Tool")
+tool.Name = "Powerful Multi Hit"
+tool.RequiresHandle = false
+
+tool.Activated:Connect(function()
+for i = 1, 15 do
+game:GetService("Players").LocalPlayer.Backpack["Multi Hit"].LocalScript.Event:FireServer()
+end
+end)
+
+tool.Parent = game.Players.LocalPlayer.Backpack
+
+local tool = Instance.new("Tool")
+tool.Name = "Powerful Kurohitsugi"
+tool.RequiresHandle = false
+
+tool.Activated:Connect(function()
+for i = 1, 15 do
+game:GetService("Players").LocalPlayer.Backpack.Kurohitsugi.LocalScript.Event:FireServer()
+end
+end)
+
+tool.Parent = game.Players.LocalPlayer.Backpack
+   end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Options",
 	Icon = "rbxassetid://4483345998",
@@ -3445,9 +3590,16 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
- Name = "Memeus(Beta)",
+ Name = "Memeus",
  Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/AnM-Battlegrounds_Memeus/main/Character"))()
+   end    
+})
+
+Tab:AddButton({
+ Name = "The Strongest Sukuna",
+ Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/AnM-Battlegrounds_True-Sukuna/main/Character"))()
    end    
 })
 
