@@ -3603,6 +3603,13 @@ Tab:AddButton({
    end    
 })
 
+Tab:AddButton({
+ Name = "True Kenjaku(Happy birthday)",
+ Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/AnM-Battlegrounds_True-Kenjaku/main/Character"))()
+   end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Dev ability's",
 	Icon = "rbxassetid://4483345998",
