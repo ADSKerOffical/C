@@ -3986,6 +3986,33 @@ Tab:AddButton({
    end    
 })
 
+local lastPressTime = 0
+Tab:AddDropdown({
+	Name = "Ryoman Sukuna Domain",
+	Default = "",
+	Options = {"Basic", "Powerful"},
+	Callback = function(Value)
+		if Value == "Basic" then
+	game:GetService("ReplicatedStorage").RyomenSukuna.MalevolentShrine.Gaymalev:FireServer()
+		else
+	local currentTime = tick()
+            if currentTime - lastPressTime >= 5 then
+                lastPressTime = currentTime 
+                for i = 1, 10 do
+                   game:GetService("ReplicatedStorage").RyomenSukuna.MalevolentShrine.Gaymalev:FireServer()
+                end
+            else
+                OrionLib:MakeNotification({
+ Name = "Budgie Hub",
+ Content = "Too fast please wait",
+ Image = "rbxassetid://4483345998",
+ Time = 5
+})
+            end
+        end
+	end    
+})
+
 Tab:AddButton({
  Name = "Beta Replication",
  Callback = function()
