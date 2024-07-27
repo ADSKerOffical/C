@@ -1187,7 +1187,7 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
    wait(0.3)
 repeat
-   wait()
+   game.RunService.Heartbeat:Wait()
    local LP = game.Players.LocalPlayer
 repeat wait() until LP.Character
 for i,v in pairs(LP.Backpack:GetChildren()) do
@@ -1597,14 +1597,9 @@ until game:GetService("Players").LocalPlayer.Character.Humanoid.Health == 0
 Tab:AddButton({
 	Name = "Anti inventory lock",
 	Callback = function()
-      while true do
- task.wait()
-  local StarterGui = game:GetService("StarterGui")
-StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
-
-local sgui = game:GetService("StarterGui")
-sgui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true)
-end
+      game.RunService.Heartbeat:Connect(function()
+  game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
+end)
 	end    
 })
 
@@ -1879,6 +1874,24 @@ for _,v in pairs(Character:GetChildren()) do
    if v:IsA("Tool") or v:IsA("HopperBin") then
        v:Destroy()
    end 
+end
+   end    
+})
+
+Tab:AddToggle({
+ Name = "Never turn off SelectionGui",
+ Default = false,
+ Callback = function(Value)
+        local player = game.Players.LocalPlayer
+local playerGui = player.PlayerGui
+jkiol = Value
+while jkiol do
+  task.wait()
+local selectionGui = playerGui:FindFirstChild("SelectionGui")
+if selectionGui and selectionGui.Enabled == false then
+  selectionGui.Enabled = true
+  print("Test Function")
+ end
 end
    end    
 })
