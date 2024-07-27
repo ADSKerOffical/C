@@ -907,6 +907,167 @@ end
 })
 
 local Section = Tab:AddSection({
+	Name = "Megumi Fushiguro"
+})
+
+Tab:AddButton({
+ Name = "Powerful Dark Surge",
+ Callback = function()
+        for i = 1, 15 do
+game:GetService("Players").LocalPlayer.Backpack["Dark Surge"].Skill.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Ultra Divine Dogs",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Divine Dogs"]["Divine Dogs"].RemoteEvent:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Divine Elephant",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Max Elephant"]["Max Elephant Strike"].RemoteEvent:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Lag Master",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Rabbits Escape"]["Rapidly Consecutive Rabbits"].RemoteEvent:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Black Hole",
+ Callback = function()
+        for i = 1, 20 do
+game:GetService("Players").LocalPlayer.Backpack["Chimera Shadow Garden"].Use.RemoteEvent:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "With This Treasure...",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack.Mahoraga.Mahoraga.RemoteEvent:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Eat a Sukuna Finger",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack["Mukbang Finger"].Script.Event:FireServer()
+   end    
+})
+
+Tab:AddLabel("Sukuna mode")
+
+Tab:AddButton({
+ Name = "Divine Cleave",
+ Callback = function()
+        for i = 1, 20 do
+game:GetService("Players").LocalPlayer.Backpack.Cleave.LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Divine Dismantle",
+ Callback = function()
+        for i = 1, 50 do
+game:GetService("Players").LocalPlayer.Backpack.Dismantle.LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Summon Mahoraga",
+ Callback = function()
+        local ohVector31 = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+game.Players.LocalPlayer.Backpack["Summon Mahoraga"].Use.RemoteEvent:FireServer(ohVector31)
+   end    
+})
+
+Tab:AddButton({
+ Name = "World Slash",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack["World Slash"].LocalScript.RemoteEvent:FireServer()
+   end    
+})
+
+Tab:AddLabel("Mahoraga mode")
+Tab:AddParagraph("He doesn't have RemoteEvent","BUUUT I found a way to become completely invisible")
+
+Tab:AddButton({
+ Name = "Become Invisible",
+ Callback = function()
+        game:GetService("ReplicatedStorage").Chainsaw_Man_RS_Folder.Remotes.Transform_RE:FireServer()
+        wait(2)
+        game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Vanish"):FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Additional Tools",
+ Callback = function()
+        local tool = Instance.new("Tool")
+tool.Name = "Kick"
+tool.RequiresHandle = false
+
+local lastPressTime = 0
+tool.Activated:Connect(function()
+  local currentTime = tick()
+            if currentTime - lastPressTime >= 2 then
+                lastPressTime = currentTime 
+      for i = 1, 3 do
+game:GetService("ReplicatedStorage").Remotes.KickSlam:FireServer()
+end
+    task.wait(0.1)
+local Humanoid = game.Players.LocalPlayer.Character.Humanoid
+local ActiveTracks = Humanoid:GetPlayingAnimationTracks()
+for _,v in pairs(ActiveTracks) do
+     v:Stop()
+end
+  task.wait(0.15)
+local Anim = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://14933743822"
+local k = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+k:AdjustSpeed(0.9)
+            end
+end)
+
+tool.Parent = game.Players.LocalPlayer.Backpack
+
+local tool = Instance.new("Tool")
+tool.Name = "Rush"
+tool.RequiresHandle = false
+
+local lastPressTime = 0
+tool.Activated:Connect(function()
+  local currentTime = tick()
+            if currentTime - lastPressTime >= 5 then
+                lastPressTime = currentTime 
+                for i = 1, 3 do
+game:GetService("ReplicatedStorage").sukuna.remotes.rush:FireServer()
+end
+            end
+end)
+
+tool.Parent = game.Players.LocalPlayer.Backpack
+   end    
+})
+
+local Section = Tab:AddSection({
 	Name = "Ichigo lorde"
 })
 
