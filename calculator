@@ -126,6 +126,207 @@ Tab:AddButton({
    end    
 })
 
+Tab:AddButton({
+ Name = "Imitation",
+ Callback = function()
+        local tool = Instance.new("Tool")
+tool.Name = "Imitation"
+tool.RequiresHandle = false
+tool.ToolTip = "Copies a random ability of a random player | can't run ReplicatedStorage"
+
+local lastPressTime = 0
+tool.Activated:Connect(function()
+  local currentTime = tick()
+            if currentTime - lastPressTime >= 3.5 then
+                lastPressTime = currentTime 
+       local Anim = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://17592658336"
+local k = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+k:AdjustSpeed(1)
+wait(3.5)
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+local function getRandomPlayer()
+    local players = Players:GetPlayers()
+    return players[math.random(1, #players)]
+end
+
+local function getRandomTool(player)
+    local tools = player.Backpack:GetChildren()
+    return tools[math.random(1, #tools)]
+end
+
+local function activateRandomAbility()
+    local randomPlayer = getRandomPlayer()
+    local randomTool = getRandomTool(randomPlayer)
+
+    local remoteEvents = {}
+    for _, descendant in ipairs(randomTool:GetDescendants()) do
+        if descendant:IsA("RemoteEvent") then
+            table.insert(remoteEvents, descendant)
+        end
+    end
+
+    if #remoteEvents > 0 then
+        local randomEvent = remoteEvents[math.random(1, #remoteEvents)]
+for i = 1, 3 do
+        randomEvent:FireServer()
+end
+    else
+        for _, descendant in ipairs(randomTool:GetDescendants()) do
+            if descendant:IsA("RemoteFunction") then
+                descendant:InvokeServer()
+                break
+            elseif descendant:IsA("BindableEvent") then
+                descendant:Fire()
+                break
+            end
+        end
+    end
+end
+
+activateRandomAbility()
+            end
+end)
+   end    
+})
+
+Tab:AddButton({
+ Name = "Highest Mastery: Mimicry",
+ Callback = function()
+        local tool = Instance.new("Tool", game.Players.LocalPlayer.Backpack)
+tool.Name = "Highest Mastery: Mimicry"
+tool.RequiresHandle = false
+tool.ToolTip = "Copies a random ability of a random player | can't run ReplicatedStorage"
+
+local lastPressTime = 0
+tool.Activated:Connect(function()
+    local currentTime = tick()
+    if currentTime - lastPressTime >= 3.5 then
+        lastPressTime = currentTime
+        local Anim = Instance.new("Animation")
+        Anim.AnimationId = "rbxassetid://17592658336"
+        local k = game:GetService("Players").LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+        k:Play()
+        k:AdjustSpeed(1)
+        wait(3.5)
+
+        local Players = game:GetService("Players")
+        local LocalPlayer = Players.LocalPlayer
+
+        local function getRandomPlayer()
+         if player ~= LocalPlayer then
+            local players = Players:GetPlayers()
+            return players[math.random(1, #players)]
+           end
+        end
+
+        local function getRandomTool(player)
+                local tools = player.Backpack:GetChildren()
+                return tools[math.random(1, #tools)]
+        end
+
+        local function activateRandomAbility()
+            local randomPlayer = getRandomPlayer()
+            local randomTool = getRandomTool(randomPlayer)
+
+            local remoteEvents = {}
+            for _, descendant in ipairs(randomTool:GetDescendants()) do
+                if descendant:IsA("RemoteEvent") then
+                    table.insert(remoteEvents, descendant)
+                end
+            end
+
+            if #remoteEvents > 0 then
+                local randomEvent = remoteEvents[math.random(1, #remoteEvents)]
+                local tool = Instance.new("Tool")
+                tool.Name = "Copied Technique"
+                tool.ToolTip = tostring(randomPlayer) .. ":" .. randomTool.Name
+                tool.RequiresHandle = false
+
+                tool.Activated:Connect(function()
+                    for i = 1, 5 do
+                        randomEvent:FireServer()
+                    end
+                end)
+
+                tool.Parent = game.Players.LocalPlayer.Backpack
+            else
+                for _, descendant in ipairs(randomTool:GetDescendants()) do
+                    if descendant:IsA("RemoteFunction") then
+                        descendant:InvokeServer()
+                        break
+                    elseif descendant:IsA("BindableEvent") then
+                        descendant:Fire()
+                        break
+                    end
+                end
+            end
+        end
+
+        activateRandomAbility()
+    end
+end)
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "MyButtonGuiTest"
+ScreenGui.Enabled = true
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local Button = Instance.new("TextButton")
+Button.Name = "Button"
+Button.Size = UDim2.new(0.07, 0.07, 0.07, 7)
+Button.Position = UDim2.new(0.86, 0, 0.4, 0)
+Button.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button.TextScaled = true
+Button.Text = "Remove all Techniques"
+Button.Parent = ScreenGui
+
+Button.MouseButton1Click:Connect(function()
+    for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+   if v:IsA("Tool") or v:IsA("HopperBin") then
+     if v.Name == "Copied Technique" then
+       v:Destroy()
+     end
+   end
+end
+end)
+
+local ScreenGui = Instance.new("ScreenGui")
+ScreenGui.Name = "MyButtonGuiTest"
+ScreenGui.Enabled = true
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local Button = Instance.new("TextButton")
+Button.Name = "Button"
+Button.Size = UDim2.new(0.04, 0.04, 0.04, 7)
+Button.Position = UDim2.new(0.945, 0, 0.4, 0)
+Button.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Button.TextColor3 = Color3.fromRGB(255, 255, 255)
+Button.TextScaled = true
+Button.Text = "Activate all Techniques"
+Button.Parent = ScreenGui
+
+Button.MouseButton1Click:Connect(function()
+    for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+   if v:IsA("Tool") or v:IsA("HopperBin") then
+     if v.Name == "Copied Technique" then
+       v.Parent = game.Players.LocalPlayer.Character
+  game.RunService.Heartbeat:Wait()
+ v:Activate()
+game.RunService.Heartbeat:Wait()
+v.Parent = game.Players.LocalPlayer.Backpack
+     end
+   end
+end
+end)
+   end    
+})
+
 local Section = Tab:AddSection({
 	Name = "Gojo Young"
 })
