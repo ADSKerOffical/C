@@ -129,7 +129,7 @@ Tab:AddButton({
 Tab:AddButton({
  Name = "Imitation",
  Callback = function()
-        local tool = Instance.new("Tool")
+        local tool = Instance.new("Tool", game.Players.LocalPlayer.Backpack)
 tool.Name = "Imitation"
 tool.RequiresHandle = false
 tool.ToolTip = "Copies a random ability of a random player | can't run ReplicatedStorage"
@@ -1738,6 +1738,58 @@ end
 end)
 
 tool.Parent = game.Players.LocalPlayer.Backpack
+   end    
+})
+
+local Section = Tab:AddSection({
+ Name = "Rayomen Sukuna"
+})
+
+Tab:AddButton({
+ Name = "Powerful Cleave",
+ Callback = function()
+        for i = 1, 10 do
+        game:GetService("Players").LocalPlayer.Backpack.Cleave.LocalScript.Event:FireServer()
+        end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Dismantle",
+ Callback = function()
+        for i = 1, 35 do
+        game:GetService("Players").LocalPlayer.Backpack.Dismantle.Dismantle.Event:FireServer()
+        end
+   end    
+})
+
+Tab:AddButton({
+ Name = "World Slash",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack["World Slash"].LocalScript.RemoteEvent:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "World Slash: Net",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack["World Slash: Net"].LocalScript.RemoteEvent:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "World Slash: Dismantle",
+ Callback = function()
+        game.Players.LocalPlayer.Backpack["World Slash: Dismantle"].Punch.Event:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Arrow of Death",
+ Callback = function()
+        for i = 1, 5 do
+game:GetService("Players").LocalPlayer.Backpack["Open: Furnace"].LocalScript.Event:FireServer()
+end
    end    
 })
 
