@@ -327,6 +327,28 @@ end)
    end    
 })
 
+Tab:AddButton({
+ Name = "Mahito Hell",
+ Callback = function()
+        local Players = game:GetService("Players")
+                local ReplicatedStorage = game:GetService("ReplicatedStorage")
+                local TeleportInterval = 0.1
+
+                local function teleportToPlayers(player)
+                    for _, targetPlayer in pairs(Players:GetPlayers()) do
+                        if targetPlayer ~= player then
+                            player.Character:MoveTo(targetPlayer.Character.PrimaryPart.Position)
+                            ReplicatedStorage.MahitoDomainExpansion.MahitoDomainEvent:FireServer()
+                            wait(TeleportInterval)
+                        end
+                    end
+                end
+
+                local localPlayer = Players.LocalPlayer
+                teleportToPlayers(localPlayer)
+   end    
+})
+
 local Section = Tab:AddSection({
 	Name = "Gojo Young"
 })
