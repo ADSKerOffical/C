@@ -4503,6 +4503,25 @@ Tab:AddDropdown({
 	end    
 })
 
+local lastPressTime = 0
+Tab:AddButton({
+ Name = "Test Domain",
+ Callback = function()
+        local currentTime = tick()
+            if currentTime - lastPressTime >= 0.5 then
+                lastPressTime = currentTime 
+                game:GetService("ReplicatedStorage").Gogay:FireServer()
+            else
+                OrionLib:MakeNotification({
+ Name = "Budgie Hub",
+ Content = "Spam does nothing",
+ Image = "rbxassetid://4483345998",
+ Time = 5
+})
+            end
+   end    
+})
+
 Tab:AddButton({
  Name = "Beta Replication",
  Callback = function()
