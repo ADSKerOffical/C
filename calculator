@@ -4544,6 +4544,19 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+ Name = "Deleting Infinity(SSC)",
+ Callback = function()
+        local ohTable1 = {
+    ["Function"] = "Fire",
+    ["Name"] = "Infinity",
+    ["rootpos"] = CFrame.new(39.0846443, 19.8230076, -162.294754, -0.0822739899, 3.01816527e-08, 0.996609747, -4.96030914e-08, 1, -3.43792514e-08, -0.996609747, -5.22634416e-08, -0.0822739899)
+}
+
+game:GetService("ReplicatedStorage").Server:InvokeServer(ohTable1)
+   end    
+})
+
+Tab:AddButton({
  Name = "Beta Replication",
  Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/BetaReplication/main/AnM"))()
