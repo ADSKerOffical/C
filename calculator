@@ -349,6 +349,13 @@ Tab:AddButton({
    end    
 })
 
+Tab:AddButton({
+ Name = "The Honored One",
+ Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/AnM-Battlegrounds_The-Honored-One/main/Character"))()
+   end    
+})
+
 local Section = Tab:AddSection({
 	Name = "Gojo Young"
 })
@@ -1702,7 +1709,7 @@ Tab:AddToggle({
  Callback = function(Value)
   ggh = Value
  while ggh do
-   wait()
+   task.wait()
    if game.Players.LocalPlayer.Character.Humanoid.Health ~= game.Players.LocalPlayer.Character.Humanoid.MaxHealth then
 game:GetService("Players").LocalPlayer.Backpack.Heal.Script.Event:FireServer()
   end
@@ -1853,7 +1860,7 @@ end
 Tab:AddButton({
 	Name = "Anti slow",
 	Callback = function()
-	repeat wait()
+	repeat task.wait()
 local Player = game.Players.LocalPlayer
 local Character = Player.Character or Player.CharacterAdded:Wait()
 
@@ -1872,9 +1879,9 @@ until game:GetService("Players").LocalPlayer.Character.Humanoid.Health == 0
 Tab:AddButton({
 	Name = "Anti inventory lock",
 	Callback = function()
-      game.RunService.Heartbeat:Connect(function()
+      while task.wait() do
   game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
-end)
+end
 	end    
 })
 
@@ -1933,7 +1940,7 @@ Tab:AddButton({
  Name = "Anti jump block",
  Callback = function()
         while true do
-  wait()
+  task.wait()
 local Player = game.Players.LocalPlayer
 local Character = Player.Character or Player.CharacterAdded:Wait()
 Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, true)
@@ -2199,7 +2206,7 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Picked"):FireServer(unpack(args))
    wait(0.3)
 repeat
-   game.RunService.Stepped:Wait()
+   task.wait()
    local LP = game.Players.LocalPlayer
 repeat wait() until LP.Character
 for i,v in pairs(LP.Backpack:GetChildren()) do
