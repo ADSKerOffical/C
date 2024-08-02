@@ -4523,6 +4523,20 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+ Name = "New 20-20-20 Dropkick",
+ Callback = function()
+        game:GetService("ReplicatedStorage").KJgay.Remote.DropKick:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Deleting Lapse Blue(SSC)",
+ Callback = function()
+        game:GetService("ReplicatedStorage").Gadgets.LapseBlueRemote:InvokeServer()
+   end    
+})
+
+Tab:AddButton({
  Name = "Beta Replication",
  Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/BetaReplication/main/AnM"))()
