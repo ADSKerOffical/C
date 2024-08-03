@@ -4557,6 +4557,13 @@ game:GetService("ReplicatedStorage").Server:InvokeServer(ohTable1)
 })
 
 Tab:AddButton({
+ Name = "Vanishaizen",
+ Callback = function()
+        game:GetService("ReplicatedStorage").Remotes.Vanishaizen:FireServer()
+   end    
+})
+
+Tab:AddButton({
  Name = "Beta Replication",
  Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/BetaReplication/main/AnM"))()
