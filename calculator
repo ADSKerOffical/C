@@ -1822,6 +1822,81 @@ end
    end    
 })
 
+local Section = Tab:AddSection({
+ Name = "Todo"
+})
+
+Tab:AddButton({
+ Name = "Powerful Budgie Dropkick",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Boogie Dropkick"].Skill.Beatdown:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Sevonfold Strike",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Sevonfold Strike"].Skill.Beatdown:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Basic Domain",
+ Callback = function()
+        game:GetService("Players").LocalPlayer.Backpack["Simple Domain"].Use.RemoteEvent:FireServer()
+   end    
+})
+
+local playerNametwo = nil
+local playerNames = {}
+local playerDropdown
+local players = game:GetService("Players")
+
+local function updatePlayerNames()
+    playerNames = {}
+    for _, player in pairs(players:GetPlayers()) do
+        table.insert(playerNames, player.Name)
+    end
+    if playerDropdown then
+        playerDropdown:Refresh(playerNames, true)
+    end
+end
+
+playerDropdown =
+    Tab:AddDropdown(
+    {
+        Name = "Bring Player",
+        Default = "Select player",
+        Options = playerNames,
+        Callback = function(PlayerUsername)
+            playerNametwo = PlayerUsername
+            local gh = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local ohInstance1 = workspace[playerNametwo]["Left Leg"]
+game:GetService("ReplicatedStorage").Remote.BoogieWoogie:FireServer(ohInstance1)
+  wait(0.8)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = gh
+        end
+    }
+)
+
+updatePlayerNames()
+
+players.PlayerAdded:Connect(
+    function(player)
+        updatePlayerNames()
+    end
+)
+
+players.PlayerRemoving:Connect(
+    function(player)
+        updatePlayerNames()
+    end
+)
+
 local Tab = Window:MakeTab({
 	Name = "Options",
 	Icon = "rbxassetid://4483345998",
@@ -1914,6 +1989,52 @@ end
 		end
 	end    
 })
+
+local playerNametwo = nil
+local playerNames = {}
+local playerDropdown
+local players = game:GetService("Players")
+
+local function updatePlayerNames()
+    playerNames = {}
+    for _, player in pairs(players:GetPlayers()) do
+        table.insert(playerNames, player.Name)
+    end
+    if playerDropdown then
+        playerDropdown:Refresh(playerNames, true)
+    end
+end
+
+playerDropdown =
+    Tab:AddDropdown(
+    {
+        Name = "Bring Player",
+        Default = "Select player",
+        Options = playerNames,
+        Callback = function(PlayerUsername)
+            playerNametwo = PlayerUsername
+            local gh = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local ohInstance1 = workspace[playerNametwo]["Left Leg"]
+game:GetService("ReplicatedStorage").Remote.BoogieWoogie:FireServer(ohInstance1)
+  wait(0.8)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = gh
+        end
+    }
+)
+
+updatePlayerNames()
+
+players.PlayerAdded:Connect(
+    function(player)
+        updatePlayerNames()
+    end
+)
+
+players.PlayerRemoving:Connect(
+    function(player)
+        updatePlayerNames()
+    end
+)
 
 Tab:AddButton({
  Name = "Anti Void",
@@ -4560,6 +4681,13 @@ Tab:AddButton({
  Name = "Vanishaizen",
  Callback = function()
         game:GetService("ReplicatedStorage").Remotes.Vanishaizen:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Malevolent Shrine 4",
+ Callback = function()
+        game:GetService("ReplicatedStorage").Events.Malclash:FireServer()
    end    
 })
 
