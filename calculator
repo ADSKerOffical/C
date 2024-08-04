@@ -2002,7 +2002,7 @@ playerDropdown =
             local gh = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 local ohInstance1 = workspace[playerNametwo]["Left Leg"]
 game:GetService("ReplicatedStorage").Remote.BoogieWoogie:FireServer(ohInstance1)
-  wait(0.8)
+  task.wait(0.95)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = gh
         end
     }
@@ -2141,7 +2141,7 @@ playerDropdown =
             local gh = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 local ohInstance1 = workspace[playerNametwo]["Left Leg"]
 game:GetService("ReplicatedStorage").Remote.BoogieWoogie:FireServer(ohInstance1)
-  wait(0.8)
+  task.wait(0.95)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = gh
         end
     }
@@ -2190,7 +2190,7 @@ playerDropdown =
       wait(0.1)
 local ohInstance1 = workspace[playerNametwo]["Left Leg"]
 game:GetService("ReplicatedStorage").Remote.BoogieWoogie:FireServer(ohInstance1)
-  wait(0.75)
+  task.wait(0.95)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = gh
         end
     }
@@ -2239,7 +2239,7 @@ playerDropdown =
          wait(0.1)
 local ohInstance1 = workspace[playerNametwo]["Left Leg"]
 game:GetService("ReplicatedStorage").Remote.BoogieWoogie:FireServer(ohInstance1)
-  wait(0.8)
+  task.wait(0.95)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = gh
         end
     }
@@ -2278,6 +2278,15 @@ part.Anchored = true
 part.Position = Vector3.new(8, -94, -92)
 part.Parent = game.Workspace
    end    
+})
+
+Tab:AddTextbox({
+	Name = "Silent Cmds",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+		game.Players:Chat(";" .. Value .."")
+	end	  
 })
 
 Tab:AddButton({
