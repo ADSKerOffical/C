@@ -696,19 +696,19 @@ game:GetService("Players").LocalPlayer.Backpack["Inverted Spear Of Heaven"].Scri
 Tab:AddLabel("Ult version")
 
 Tab:AddButton({
- Name = "Powerful Ground Strike",
+ Name = "Powerful Flash Strike",
  Callback = function()
         for i = 1, 10 do
-game:GetService("Players").LocalPlayer.Backpack["Through out Earth"].Script.Event:FireServer()
+game:GetService("Players").LocalPlayer.Backpack["Flash Strike"].LocalScript.Event:FireServer()
 end
    end    
 })
 
 Tab:AddButton({
- Name = "Powerful Throat Slit",
+ Name = "Powerful Domain Breaker",
  Callback = function()
-        for i = 1, 10 do
-game:GetService("Players").LocalPlayer.Backpack["Throat Slit"].LocalScript.Event:FireServer()
+        for i = 1, 6 do
+game:GetService("Players").LocalPlayer.Backpack["Domain Breaker"].LocalScript.Event:FireServer()
 end
    end    
 })
@@ -778,6 +778,131 @@ Tab:AddButton(
     }
 )
 
+local Section = Tab:AddSection({
+ Name = "Black Goku"
+})
+
+Tab:AddButton({
+ Name = "Powerful Mortal Extinguisher",
+ Callback = function()
+        for i = 1, 15 do
+game:GetService("Players").LocalPlayer.Backpack["Mortal Extinguisher"].Punch.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Divine Bursttrough",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Divine Bursttrough"].Punch.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Barrage",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack.Barrage.Punch.Event:FireServer()
+end
+   end    
+})
+
+local Section = Tab:AddSection({
+ Name = "Zenitzu"
+})
+
+Tab:AddButton({
+ Name = "Server's Scar",
+ Callback = function()
+        for i = 1, 10 do
+task.spawn(function()
+game:GetService("Players").LocalPlayer.Backpack["Thunder Clap"].TC.Event:FireServer()
+end)
+end
+   end    
+})
+
+local Section = Tab:AddSection({
+ Name = "Garou"
+})
+
+Tab:AddButton({
+ Name = "Powerful Crushed Rock",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Crushed Rock"].Punch.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Flowing Water",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Flowing Water"].LocalScript.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Hunter's Currently",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Hunter's Cruelty"].Ground.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Final Hunt",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["The Final Hunt"].Ground.Event:FireServer()
+end
+   end    
+})
+
+local Section = Tab:AddSection({
+ Name = "Rengoku"
+})
+
+Tab:AddButton({
+ Name = "Powerful Blazing Universe",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Blazing Universe"].Ground.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Rising Scorching Sun",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Rising Scorching Sun"].Ground.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Unknowing Fire",
+ Callback = function()
+        for i = 1, 25 do
+game:GetService("Players").LocalPlayer.Backpack["Unknowing Fire"].Punch.Event:FireServer()
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "For Real Rengoku",
+ Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack.Rengoku.Ground.Event:FireServer()
+end
+   end    
+})
 
 local Section = Tab:AddSection({
 	Name = "Luffy"
