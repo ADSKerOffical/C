@@ -1927,7 +1927,7 @@ Tab:AddButton({
 Tab:AddButton({
  Name = "World Slash: Net",
  Callback = function()
-        game:GetService("Players").LocalPlayer.Backpack["World Slash: Net"].LocalScript.RemoteEvent:FireServer()
+        game:GetService("Players").LocalPlayer.Backpack["Dismantle: Net"].LocalScript.RemoteEvent:FireServer()
    end    
 })
 
@@ -1941,8 +1941,8 @@ Tab:AddButton({
 Tab:AddButton({
  Name = "Arrow of Death",
  Callback = function()
-        for i = 1, 5 do
-game:GetService("Players").LocalPlayer.Backpack["Open: Furnace"].LocalScript.Event:FireServer()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack.Furnace.LocalScript.event:FireServer()
 end
    end    
 })
@@ -4920,6 +4920,27 @@ Tab:AddButton({
  Name = "Malevolent Shrine 4",
  Callback = function()
         game:GetService("ReplicatedStorage").Events.Malclash:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Jujutsu Shenanigans Infinity Void",
+ Callback = function()
+        game:GetService("ReplicatedStorage").Events.UnlimitedVoid:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "New Domain 0.2",
+ Callback = function()
+        game:GetService("ReplicatedStorage").Events["UnlimitedVoid0.2"]:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Jujutsu Shenanigans Malevolent Shrine",
+ Callback = function()
+        game:GetService("ReplicatedStorage").Events.MalevolentShrine5:FireServer()
    end    
 })
 
