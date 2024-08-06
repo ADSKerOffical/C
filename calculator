@@ -2290,6 +2290,20 @@ Tab:AddTextbox({
 })
 
 Tab:AddButton({
+ Name = "Cure",
+ Callback = function()
+        game.Players:Chat("/e heal")
+   end    
+})
+
+Tab:AddButton({
+ Name = "Bug mode(Godmode)",
+ Callback = function()
+        game.Players:Chat("/e bugmode")
+   end    
+})
+
+Tab:AddButton({
  Name = "Anti jump block",
  Callback = function()
         while true do
