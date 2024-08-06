@@ -4982,6 +4982,36 @@ Tab:AddButton({
    end    
 })
 
+Tab:AddDropdown({
+	Name = "Gojo v3 Max Red",
+	Default = "",
+	Options = {"Basic", "Powerful"},
+	Callback = function(Value)
+		if Value == "Basic" then
+game:GetService("ReplicatedStorage").GojoV3.maxred:FireServer()
+		elseif Value == "Powerful" then
+		for i = 1, 5 do
+game:GetService("ReplicatedStorage").GojoV3.maxred:FireServer()
+end
+		end
+	end    
+})
+
+Tab:AddDropdown({
+	Name = "Gojo v3 Max Blue",
+	Default = "",
+	Options = {"Basic", "Powerful"},
+	Callback = function(Value)
+		if Value == "Basic" then
+game:GetService("ReplicatedStorage").GojoV3.maxblue:FireServer()
+		elseif Value == "Powerful" then
+		for i = 1, 10 do
+game:GetService("ReplicatedStorage").GojoV3.maxblue:FireServer()
+end
+		end
+	end    
+})
+
 Tab:AddButton({
  Name = "Beta Replication",
  Callback = function()
