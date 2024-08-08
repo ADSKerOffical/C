@@ -5034,6 +5034,38 @@ end
 })
 
 Tab:AddButton({
+ Name = "Powerful Pure Love",
+ Callback = function()
+        for i = 1, 7 do
+        game:GetService("ReplicatedStorage").Yuta.love:FireServer()
+        end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Gojo Rush",
+ Callback = function()
+        for i = 1, 40 do
+        game:GetService("ReplicatedStorage").GojoSatoru.rush:FireServer()
+        end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Gojo v3 Purple",
+ Callback = function()
+        game:GetService("ReplicatedStorage").GojoV3.haitram:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Gojo v3 Nuke",
+ Callback = function()
+        game:GetService("ReplicatedStorage").GojoV3.nuke:FireServer()
+   end    
+})
+
+Tab:AddButton({
  Name = "Beta Replication",
  Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/BetaReplication/main/AnM"))()
