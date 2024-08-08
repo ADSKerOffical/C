@@ -356,6 +356,13 @@ Tab:AddButton({
    end    
 })
 
+Tab:AddButton({
+ Name = "Astaroth(Beta)",
+ Callback = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/AnM-Battlegrounds_Astaroth/main/ScriptSourceCharacter"))()
+   end    
+})
+
 local Section = Tab:AddSection({
 	Name = "Gojo Young"
 })
