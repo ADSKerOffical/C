@@ -5066,6 +5066,13 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
+ Name = "Test Sukuna Slash",
+ Callback = function()
+        game:GetService("ReplicatedStorage").sukunaslash:FireServer()
+   end    
+})
+
+Tab:AddButton({
  Name = "Beta Replication",
  Callback = function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/BetaReplication/main/AnM"))()
