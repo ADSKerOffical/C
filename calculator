@@ -2029,6 +2029,131 @@ players.PlayerRemoving:Connect(
     end
 )
 
+local Section = Tab:AddSection({
+ Name = "Inumaki"
+})
+
+Tab:AddButton({
+ Name = "Kill Combo",
+ Callback = function()
+        for i = 1, 1 do
+game.Players:Chat("come")
+end
+  wait(0.65)
+for i = 1, 10 do
+game.Players:Chat("die")
+game.Players:Chat("explode")
+end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Stun Combo",
+ Callback = function()
+        for i = 1, 1 do
+game.Players:Chat("come")
+end
+  wait(0.65)
+for i = 1, 3 do
+game.Players:Chat("stun")
+game.Players:Chat("silence")
+game.Players:Chat("sleep")
+game.Players:Chat("dont move")
+end
+   end    
+})
+
+Tab:AddToggle({
+ Name = "Kill Aura",
+ Default = false,
+ Callback = function(Value)
+ty = Value
+        while ty do
+   wait(0.05)
+local closestDistance = math.huge
+                    local closestHumanoid = nil
+                    local Usuario = game.Players.LocalPlayer
+
+                    for _, v in pairs(workspace:GetDescendants()) do
+                        if v:IsA("Humanoid") and v.RootPart and v.RootPart.Parent ~= Usuario.Character then
+                            local distance =
+                                (v.RootPart.Position - Usuario.Character.HumanoidRootPart.Position).magnitude
+                            if distance < closestDistance and distance <= 35 then
+                                closestDistance = distance
+                                closestHumanoid = v
+                            end
+                        end
+                    end
+
+                    if closestHumanoid and closestHumanoid.Health ~= 0 then
+                      game.Players:Chat("die")
+                      game.Players:Chat("explode")
+                    end
+    end
+   end    
+})
+
+Tab:AddToggle({
+ Name = "Stun Aura",
+ Default = false,
+ Callback = function(Value)
+tyi = Value
+        while tyi do
+   wait(0.05)
+local closestDistance = math.huge
+                    local closestHumanoid = nil
+                    local Usuario = game.Players.LocalPlayer
+
+                    for _, v in pairs(workspace:GetDescendants()) do
+                        if v:IsA("Humanoid") and v.RootPart and v.RootPart.Parent ~= Usuario.Character then
+                            local distance =
+                                (v.RootPart.Position - Usuario.Character.HumanoidRootPart.Position).magnitude
+                            if distance < closestDistance and distance <= 45 then
+                                closestDistance = distance
+                                closestHumanoid = v
+                            end
+                        end
+                    end
+
+                    if closestHumanoid and closestHumanoid.Health ~= 0 then
+                       game.Players:Chat("stun")
+                       game.Players:Chat("silence")
+                       game.Players:Chat("sleep")
+                       game.Players:Chat("dont move")
+                    end
+    end
+   end    
+})
+
+Tab:AddToggle({
+ Name = "Bring Aura",
+ Default = false,
+ Callback = function(Value)
+tyiy = Value
+        while tyiy do
+   wait(0.05)
+local closestDistance = math.huge
+                    local closestHumanoid = nil
+                    local Usuario = game.Players.LocalPlayer
+
+                    for _, v in pairs(workspace:GetDescendants()) do
+                        if v:IsA("Humanoid") and v.RootPart and v.RootPart.Parent ~= Usuario.Character then
+                            local distance =
+                                (v.RootPart.Position - Usuario.Character.HumanoidRootPart.Position).magnitude
+                            if distance < closestDistance and distance <= 100 then
+                                closestDistance = distance
+                                closestHumanoid = v
+                            end
+                        end
+                    end
+
+                    if closestHumanoid and closestHumanoid.Health ~= 0 then
+                       game.Players:Chat("come")
+                    end
+    end
+   end    
+})
+
 local Tab = Window:MakeTab({
 	Name = "Options",
 	Icon = "rbxassetid://4483345998",
