@@ -1827,10 +1827,10 @@ end
 })
 
 Tab:AddButton({
- Name = "Powerful Kurohitsugi",
+ Name = "Powerful Kurohitsugi (Hado 90)",
  Callback = function()
         for i = 1, 15 do
-game:GetService("Players").LocalPlayer.Backpack.Kurohitsugi.LocalScript.Event:FireServer()
+game:GetService("Players").LocalPlayer.Backpack["Hado 90"].LocalScript.Event:FireServer()
 end
    end    
 })
@@ -2154,6 +2154,124 @@ local closestDistance = math.huge
    end    
 })
 
+local Section = Tab:AddSection({
+ Name = "Cid Unleashed (you can get this one by killing boss Cid Kagenou)"
+})
+
+Tab:AddButton({
+ Name = "Powerful Speed Blitz",
+    Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Speed Blitz"].LocalScript.Event:FireServer()
+        end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Imminet Blink",
+    Callback = function()
+        for i = 1, 10 do
+game:GetService("ReplicatedStorage").CidKageeno.Blinkk:FireServer()
+        end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Recovery Atomic",
+    Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Recovery Atomic"].LocalScript.Event:FireServer()
+        end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Overdrive",
+    Callback = function()
+game:GetService("Players").LocalPlayer.Backpack.Overdrive["Local Script"].Event:FireServer()
+   end    
+})
+
+
+local Section = Tab:AddSection({
+ Name = "Gojo Unleashed (you can get this one by killing boss Gojo Satoru)"
+})
+
+Tab:AddButton({
+ Name = "Powerful Black Flash",
+    Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Black Flash"].LocalScript.Event:FireServer()
+        end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Maximum Blue",
+    Callback = function()
+        for i = 1, 10 do
+game:GetService("ReplicatedStorage").GojoV3.maxblue:FireServer()
+        end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Maximum Red",
+    Callback = function()
+        for i = 1, 10 do
+game:GetService("ReplicatedStorage").GojoV3.maxred:FireServer()
+        end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Simple Domain",
+    Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Simple Domain"].Use.RemoteEvent:FireServer()
+        end
+   end    
+})
+
+Tab:AddButton({
+ Name = "200% Hollow Purple",
+    Callback = function()
+game:GetService("ReplicatedStorage").GojoV3.haitram:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Hollow Purple Nuke",
+    Callback = function()
+game:GetService("ReplicatedStorage").GojoV3.nuke:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Unlimited Void 0,2",
+    Callback = function()
+game:GetService("ReplicatedStorage").Events["UnlimitedVoid0.2"]:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Reverse Cursed Technique",
+    Callback = function()
+        for i = 1, 10 do
+game:GetService("Players").LocalPlayer.Backpack["Reverse Cursed Technique"].Script.Event:FireServer()
+        end
+   end    
+})
+
+Tab:AddButton({
+ Name = "Unlimited Void",
+    Callback = function()
+game:GetService("ReplicatedStorage").Events.UnlimitedVoid:FireServer()
+   end    
+})
+
+
+
 local Tab = Window:MakeTab({
 	Name = "Options",
 	Icon = "rbxassetid://4483345998",
@@ -2209,7 +2327,7 @@ until game:GetService("Players").LocalPlayer.Character.Humanoid.Health == 0
 })
 
 Tab:AddButton({
-	Name = "Anti inventory lock",
+	Name = "Anti Inventory Lock",
 	Callback = function()
       while task.wait() do
   game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Backpack, true)
@@ -2224,7 +2342,7 @@ Tab:AddDropdown({
         "Gojo Young", "Yuji Itadori", "Toji Fushiguro", "Denji", "Goku Black", "Muichiro Tokito", "Akaza", "Zenitsu Agatsuma",
         "Kamado Tanjiro", "Kyojuro Rengoku", "Garou", "Giyu Tomioka", "Saitama", "Gyutaro", "Sakuya Izayoi", "Gojo Satoru", "Goku Ultra",
         "Roronoa Zoro", "Yuta Okkotsu", "MK D Luffy", "Cid Kagenou", "Kenjaku", "Vergil", "Megumi Fushiguro", "Green Hero",
-        "Asta", "Kinji Hakari", "Ichigo Vasto Lorde", "Ayanokoji Kiyotaka", "Sano Manjiro", "Kurosaki Ichigo"
+        "Asta", "Kinji Hakari", "Ichigo Vasto Lorde", "Ayanokoji Kiyotaka", "Sano Manjiro", "Kurosaki Ichigo", "Mahito", "Sosuke Aizen", "Ryomen Sukuna", "Todo Aoi", "Toge Inumaki"
     },
     Callback = function(Value)
             local args = { Value }
