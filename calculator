@@ -5361,5 +5361,164 @@ local function DS()
   end
 end
 
+local function antivoidbring()
+local aspart = Instance.new("Part")
+aspart.Name = "AntiFallPart2"
+aspart.Size = Vector3.new(50000, 5, 50000)
+aspart.Transparency = 0.8
+aspart.Anchored = true
+aspart.Position = Vector3.new(-246, -130, 2850)
+aspart.Parent = game.Workspace
+end
+
+local function antireporters()
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
+local playerIds = {
+    2788546528,
+    1464528932,
+    587373633,
+    1436511633,
+    5056217394,
+    3170498762,
+    2760968590,
+    2313552554,
+    1562795410,
+    2247053017,
+    2398148071,
+    2907412267,
+    5703791307,
+    3990223741,
+}
+
+local function checkPlayers()
+    for _, player in pairs(game.Players:GetPlayers()) do
+        if table.find(playerIds, player.UserId) then
+            Spooky = Instance.new("Sound", game.Workspace)
+            Spooky.Name = "Anti Reporter System"
+            Spooky.SoundId = "rbxassetid://5304042701"
+            Spooky.Volume = 1
+            Spooky.PlaybackSpeed = 1
+            Spooky.Looped = false
+            Spooky:Play()
+            OrionLib:MakeNotification({
+                Name = "Budgie Hub | Detector",
+                Content = "Attention! Reporter " .. player.Name .. " Joined in game what do you want to do with it?",
+                Image = "rbxassetid://4483345998",
+                Time = 10
+            })
+            wait(4)
+            local h = Instance.new("ScreenGui")
+local Main = Instance.new("ImageLabel")
+local Top = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local Text1Button = Instance.new("TextButton")
+local Text2Button = Instance.new("TextButton")
+local Text3Button = Instance.new("TextButton")
+local Text4Button = Instance.new("TextButton")
+
+h.Name = "h"
+h.Parent = game:GetService("CoreGui")
+h.ResetOnSpawn = false
+
+Main.Name = "Main"
+Main.Parent = h
+Main.Active = true
+Main.Draggable = true
+Main.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Main.BorderSizePixel = 0
+Main.Position = UDim2.new(0.3, 0, 0.3, 0)
+Main.Size = UDim2.new(0, 300, 0, 160)
+Main.Image = "rbxassetid://16336200609"
+
+Top.Name = "Top"
+Top.Parent = Main
+Top.BackgroundColor3 = Color3.fromRGB(0, 90, 0)
+Top.BorderSizePixel = 0
+Top.Size = UDim2.new(1, 0, 0, 30)
+
+Title.Name = "Title"
+Title.Parent = Top
+Title.BackgroundColor3 = Color3.fromRGB(0, 60, 0)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0, 0, 0.295454562, 0)
+Title.Size = UDim2.new(1, 0, 1, 0)
+Title.Font = Enum.Font.SourceSans
+Title.Text = "What do you want to do with it?"
+Title.TextColor3 = Color3.fromRGB(0, 255, 0)
+Title.TextScaled = true
+Title.TextSize = 14.000
+Title.TextWrapped = true
+
+TextButton.Parent = Main
+TextButton.BackgroundColor3 = Color3.fromRGB(0, 99, 0)
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.1, 0, 0.35, 0)
+TextButton.Size = UDim2.new(0.18, 0, 0.22, 0)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "No quarter to be given"
+TextButton.TextColor3 = Color3.fromRGB(0, 255, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+Text1Button.Parent = Main
+Text1Button.BackgroundColor3 = Color3.fromRGB(0, 99, 0)
+Text1Button.BorderSizePixel = 0
+Text1Button.Position = UDim2.new(0.425, 0, 0.35, 0)
+Text1Button.Size = UDim2.new(0.18, 0, 0.22, 0)
+Text1Button.Font = Enum.Font.SourceSans
+Text1Button.Text = "Get Out"
+Text1Button.TextColor3 = Color3.fromRGB(0, 255, 0)
+Text1Button.TextScaled = true
+Text1Button.TextSize = 14.000
+Text1Button.TextWrapped = true
+
+Text2Button.Parent = Main
+Text2Button.BackgroundColor3 = Color3.fromRGB(0, 99, 0)
+Text2Button.BorderSizePixel = 0
+Text2Button.Position = UDim2.new(0.75, 0, 0.35, 0)
+Text2Button.Size = UDim2.new(0.18, 0, 0.22, 0)
+Text2Button.Font = Enum.Font.SourceSans
+Text2Button.Text = "Dont care"
+Text2Button.TextColor3 = Color3.fromRGB(0, 255, 0)
+Text2Button.TextScaled = true
+Text2Button.TextSize = 14.000
+Text2Button.TextWrapped = true
+
+TextButton.MouseButton1Click:Connect(function()
+if player.Character then
+local gh = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+       wait(0.1)
+     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-246, -189, 2850)
+      wait(0.25)
+local ohInstance1 = workspace[player.Name]["Torso"]
+game:GetService("ReplicatedStorage").Remote.BoogieWoogie:FireServer(ohInstance1)
+  task.wait(1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = gh
+   h:Destroy()
+  end
+end)
+
+Text1Button.MouseButton1Click:Connect(function()
+   game:Shutdown()
+end)
+
+Text2Button.MouseButton1Click:Connect(function()
+   h:Destroy()
+end)
+            return
+        end
+    end
+
+    task.wait(1)
+    checkPlayers()
+end
+
+checkPlayers()
+end
+
+coroutine.wrap(antivoidbring)()
+coroutine.wrap(antireporters)()
 coroutine.wrap(DS)()
 coroutine.wrap(chatadm)()
