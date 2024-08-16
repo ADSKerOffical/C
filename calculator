@@ -5394,19 +5394,6 @@ local Tab = Window:MakeTab({
 Tab:AddParagraph("ADSKerX","The main creator of this script. did a lot of different functions and scripts")
 Tab:AddParagraph("Wolfdmitrich","Web scripter who knows: Python, Html, CSS and a little Lua. He did a lot for this script, for example: made an obfuscator for the script, helped me make admin commands, abilities for characters, and so on")
 
--- Список ID премиум пользователей
-local premiumUsers = {
-    6036506267, -- Hamsterovich
-    -- 5042713445, -- Wolfdmitrich
-    -- 5199937747 -- ADSKerX
-}
-
-local function AntiKick()
-xpcall(function() OldNameCall = hookmetamethod(game.Players.LocalPlayer, "__namecall", function(Self, ...) local Args = {...} local NamecallMethod = getnamecallmethod() if Self == game.Players.LocalPlayer and NamecallMethod == "Kick" then return nil end return OldNameCall(Self, ...) end) print("Anti Kick Enabled.") end, function(e) print(e) end)
-end
-
-AntiKick()
-
 local function chatadm()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ADSKerOffical/ChatAdmin_AnM/main/Source"))()
 end
@@ -5423,7 +5410,7 @@ aspart.Name = "AntiFallPart2"
 aspart.Size = Vector3.new(50000, 5, 50000)
 aspart.Transparency = 0.8
 aspart.Anchored = true
-aspart.Position = Vector3.new(-246, -130, 2850)
+aspart.Position = Vector3.new(-246, -210, 2850)
 aspart.Parent = game.Workspace
 end
 
