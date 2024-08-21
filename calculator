@@ -9,7 +9,7 @@ local Tab = Window:MakeTab({
 })
 
 local Section = Tab:AddSection({
-	Name = "Gota (New character, you can't find it in list of character)"
+	Name = "Gota"
 })
 
 Tab:AddLabel("Press all buttons below to activate Gota")
@@ -1803,11 +1803,11 @@ Tab:AddButton({
 })
 
 local Section = Tab:AddSection({
- Name = "Aizen"
+ Name = "Aizen Sosuke"
 })
 
 Tab:AddButton({
- Name = "Powerful Raioko",
+ Name = "Powerful Raikoho",
  Callback = function()
         for i = 1, 15 do
 game:GetService("Players").LocalPlayer.Backpack.Raikoho.LocalScript.Event:FireServer()
@@ -1825,89 +1825,124 @@ end
 })
 
 Tab:AddButton({
- Name = "Powerful Multi Hit",
+ Name = "Shatter",
  Callback = function()
-        for i = 1, 15 do
-game:GetService("Players").LocalPlayer.Backpack["Multi Hit"].LocalScript.Event:FireServer()
+game:GetService("Players").LocalPlayer.Backpack.Shatter.LocalScript.event:FireServer()
+   end    
+})
+
+Tab:AddButton({
+ Name = "Powerful Sonido Clones",
+ Callback = function()
+        for i = 1, 5 do
+game:GetService("Players").LocalPlayer.Backpack["Sonido Clones"].LocalScript.Event:FireServer()
 end
    end    
 })
 
 Tab:AddButton({
- Name = "Powerful Kurohitsugi (Hado 90)",
+ Name = "Powerful Hado 90",
  Callback = function()
-        for i = 1, 15 do
+        for i = 1, 5 do
 game:GetService("Players").LocalPlayer.Backpack["Hado 90"].LocalScript.Event:FireServer()
 end
    end    
 })
 
-Tab:AddToggle({
- Name = "Eternal Cure",
- Default = false,
- Callback = function(Value)
-  ggh = Value
- while ggh do
-   task.wait()
-   if game.Players.LocalPlayer.Character.Humanoid.Health ~= game.Players.LocalPlayer.Character.Humanoid.MaxHealth then
-game:GetService("Players").LocalPlayer.Backpack.Heal.Script.Event:FireServer()
-  end
-end
+Tab:AddButton({
+ Name = "Awakening",
+    Callback = function()
+    game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Hogyoku Fusion").LocalScript.Event:FireServer()
+   end    
+})
+
+Tab:AddLabel("Hogyoku Fusion Form")
+
+Tab:AddButton({
+ Name = "Powerful Reality Shatter",
+ Callback = function()
+        for i = 1, 5 do
+game:GetService("Players").LocalPlayer.Backpack["Reality Shatter"].LocalScript.Event:FireServer()
+        end
    end    
 })
 
 Tab:AddButton({
- Name = "Tools Pack",
+ Name = "Hadō 90: Kurohitsugi!",
  Callback = function()
-        local tool = Instance.new("Tool")
-tool.Name = "Powerful Raioko"
-tool.RequiresHandle = false
-
-tool.Activated:Connect(function()
-for i = 1, 15 do
-game:GetService("Players").LocalPlayer.Backpack.Raikoho.LocalScript.Event:FireServer()
-end
-end)
-
-tool.Parent = game.Players.LocalPlayer.Backpack
-
-local tool = Instance.new("Tool")
-tool.Name = "Powerful Flash Slash"
-tool.RequiresHandle = false
-
-tool.Activated:Connect(function()
-for i = 1, 30 do
-game:GetService("Players").LocalPlayer.Backpack["Flash Slash"].LocalScript.Event:FireServer()
-end
-end)
-
-tool.Parent = game.Players.LocalPlayer.Backpack
-
-local tool = Instance.new("Tool")
-tool.Name = "Powerful Multi Hit"
-tool.RequiresHandle = false
-
-tool.Activated:Connect(function()
-for i = 1, 15 do
-game:GetService("Players").LocalPlayer.Backpack["Multi Hit"].LocalScript.Event:FireServer()
-end
-end)
-
-tool.Parent = game.Players.LocalPlayer.Backpack
-
-local tool = Instance.new("Tool")
-tool.Name = "Powerful Kurohitsugi"
-tool.RequiresHandle = false
-
-tool.Activated:Connect(function()
-for i = 1, 15 do
-game:GetService("Players").LocalPlayer.Backpack.Kurohitsugi.LocalScript.Event:FireServer()
-end
-end)
-
-tool.Parent = game.Players.LocalPlayer.Backpack
+        for i = 1, 5 do
+game:GetService("Players").LocalPlayer.Backpack[utf8.char(72, 97, 100, 333, 32, 57, 48, 58, 32, 75, 117, 114, 111, 104, 105, 116, 115, 117, 103, 105)].LocalScript.Event:FireServer()
+        end
    end    
 })
+
+
+-- Tab:AddToggle({
+--  Name = "Eternal Cure",
+--  Default = false,
+--  Callback = function(Value)
+--   ggh = Value
+--  while ggh do
+--    task.wait()
+--    if game.Players.LocalPlayer.Character.Humanoid.Health ~= game.Players.LocalPlayer.Character.Humanoid.MaxHealth then
+-- game:GetService("Players").LocalPlayer.Backpack.Heal.Script.Event:FireServer()
+--   end
+-- end
+--    end    
+-- })
+
+-- Tab:AddButton({
+--  Name = "Tools Pack",
+--  Callback = function()
+--         local tool = Instance.new("Tool")
+-- tool.Name = "Powerful Raioko"
+-- tool.RequiresHandle = false
+
+-- tool.Activated:Connect(function()
+-- for i = 1, 15 do
+-- game:GetService("Players").LocalPlayer.Backpack.Raikoho.LocalScript.Event:FireServer()
+-- end
+-- end)
+
+-- tool.Parent = game.Players.LocalPlayer.Backpack
+
+-- local tool = Instance.new("Tool")
+-- tool.Name = "Powerful Flash Slash"
+-- tool.RequiresHandle = false
+
+-- tool.Activated:Connect(function()
+-- for i = 1, 30 do
+-- game:GetService("Players").LocalPlayer.Backpack["Flash Slash"].LocalScript.Event:FireServer()
+-- end
+-- end)
+
+-- tool.Parent = game.Players.LocalPlayer.Backpack
+
+-- local tool = Instance.new("Tool")
+-- tool.Name = "Powerful Multi Hit"
+-- tool.RequiresHandle = false
+
+-- tool.Activated:Connect(function()
+-- for i = 1, 15 do
+-- game:GetService("Players").LocalPlayer.Backpack["Multi Hit"].LocalScript.Event:FireServer()
+-- end
+-- end)
+
+-- tool.Parent = game.Players.LocalPlayer.Backpack
+
+-- local tool = Instance.new("Tool")
+-- tool.Name = "Powerful Kurohitsugi"
+-- tool.RequiresHandle = false
+
+-- tool.Activated:Connect(function()
+-- for i = 1, 15 do
+-- game:GetService("Players").LocalPlayer.Backpack.Kurohitsugi.LocalScript.Event:FireServer()
+-- end
+-- end)
+
+-- tool.Parent = game.Players.LocalPlayer.Backpack
+--    end    
+-- })
 
 local Section = Tab:AddSection({
  Name = "Rayomen Sukuna"
