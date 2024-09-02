@@ -5730,6 +5730,7 @@ aspart.Parent = game.Workspace
 end
 
 local function antireporters()
+ local function hh()
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/ionlyusegithubformcmods/1-Line-Scripts/main/Mobile%20Friendly%20Orion')))()
 local playerIds = {
     2788546528,
@@ -5874,6 +5875,9 @@ end)
 end
 
 checkPlayers()
+ end
+coroutine.wrap(hh)()
+game.Players.PlayerAdded:Connect(hh)
 end
 
 coroutine.wrap(antivoidbring)()
