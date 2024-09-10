@@ -5693,6 +5693,33 @@ end)
    end    
 })
 
+local Tab = Window:MakeTab({
+	Name = "Instruction",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+ds = [[
+
+1. For the functions in the "Character" tab to work, you need to select this character or at least have this tool
+
+2. The menu can be moved, but if it doesn't move then it's a problem with your executor
+
+3. I'm not a god and I can't get absolutely any ability so don't ask me to get any admin abilities or something like that
+
+4. you can use commands in chat /e cmds (if you execute the script again this will be used several times)
+
+5. If an anti reporter detects a player, then I wish to either kick him or leave the game, because because of them you can get banned
+
+6. bugmode allows the local player not to die from normal damage and tools can be used, and godmode with dodge bypasses absolutely any damage, but items cannot be used (for example, when using Mugetsu with bugmode the player dies, but with this mod the player will not die)
+
+7. I advise you not to use Input Character, but Never turn off SelectionGui, because the window does not disappear when selecting a character and it’s more convenient this way (this function is located in the "Options" tab)
+
+8. SSC is mean "Server Side Cooldown"(find in tab "Dev Abilities")
+]]
+
+Tab:AddParagraph("Instruction: ", ds)
+
 OrionLib:MakeNotification({
  Name = "Budgie Hub",
  Content = "Creator – MEGACOCONUT (ADSKerX) and Hamsterovich (Wolfdmitrich)",
