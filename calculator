@@ -2312,7 +2312,186 @@ game:GetService("ReplicatedStorage").Events.UnlimitedVoid:FireServer()
    end    
 })
 
+local Section = Tab:AddSection({
+ Name = "Coyote Starrk (you can get this one by killing boss Coyote Starrk)"
+})
 
+Tab:AddLabel("Default Form")
+
+Tab:AddButton(
+    {
+        Name = "Powerful Flash Barrage",
+        Callback = function()
+            for i = 1, 15 do
+                game:GetService("Players").LocalPlayer.Backpack["Flash Barrage"].LocalScript.Event:FireServer()
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Powerful Flash Cleave",
+        Callback = function()
+            for i = 1, 15 do
+                game:GetService("Players").LocalPlayer.Backpack["Flash Cleave"].LocalScript.Event:FireServer()
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "PowerfulSonido Clones",
+        Callback = function()
+            for i = 1, 15 do
+                game:GetService("Players").LocalPlayer.Backpack["Sonido Clones"].LocalScript.Event:FireServer()
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Powerful Chest Cero",
+        Callback = function()
+            for i = 1, 15 do
+                game:GetService("Players").LocalPlayer.Backpack["Chest Cero"].LocalScript.Event:FireServer()
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Sonido",
+        Callback = function()
+            game:GetService("ReplicatedStorage").Remotes.sonido:FireServer()
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Garganta",
+        Callback = function()
+            game:GetService("Players").LocalPlayer.Backpack.Garganta.LocalScript.Event:FireServer()
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Awakening / Resurrección - Los Lobos",
+        Callback = function()
+            game:GetService("Players").LocalPlayer.Backpack[
+                utf8.char(
+                    82,
+                    101,
+                    115,
+                    117,
+                    114,
+                    114,
+                    101,
+                    99,
+                    99,
+                    105,
+                    243,
+                    110,
+                    58,
+                    32,
+                    32,
+                    76,
+                    111,
+                    115,
+                    32,
+                    76,
+                    111,
+                    98,
+                    111,
+                    115
+                )
+            ].LocalScript.Event:FireServer()
+        end
+    }
+)
+
+Tab:AddButton("Resurrección Form")
+
+Tab:AddButton(
+    {
+        Name = "Powerful Los Lobos",
+        Callback = function()
+            for i = 1, 15 do
+                game:GetService("Players").LocalPlayer.Backpack["Los Lobos"].LocalScript.Event:FireServer()
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Powerful Colmilo",
+        Callback = function()
+            for i = 1, 15 do
+                game:GetService("Players").LocalPlayer.Backpack.Colmilo.LocalScript.Event:FireServer()
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Powerful Right Gun",
+        Callback = function()
+            for i = 1, 15 do
+                game:GetService("Players").LocalPlayer.Backpack["Right Gun"].LocalScript.Event:FireServer()
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Powerful Sonido Cero",
+        Callback = function()
+            for i = 1, 15 do
+                game:GetService("Players").LocalPlayer.Backpack["Sonido Cero"].LocalScript.event:FireServer()
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Powerful Spinning Shots",
+        Callback = function()
+            for i = 1, 15 do
+                game:GetService("Players").LocalPlayer.Backpack["Spinning Shots"].LocalScript.Event:FireServer()
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Powerful Wolves",
+        Callback = function()
+            for i = 1, 15 do
+                game:GetService("Players").LocalPlayer.Backpack.Wolves["Divine Dogs"].RemoteEvent:FireServer()
+            end
+        end
+    }
+)
+
+Tab:AddButton(
+    {
+        Name = "Cero Metralleta",
+        Callback = function()
+            game:GetService("Players").LocalPlayer.Backpack["Cero Metralleta"].LocalScript.Event:FireServer()
+        end
+    }
+)
 
 local Tab = Window:MakeTab({
 	Name = "Options",
