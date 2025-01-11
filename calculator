@@ -2621,6 +2621,20 @@ part.Parent = game.Workspace
    end    
 })
 
+Tab:AddToggle({
+ Name = "Anti Void Bring / Void",
+ Default = false,
+ Callback = function(Value)
+opjh = Value
+    while opjh and game:GetService("RunService").Heartbeat:Wait() do
+   if game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.Y <= -208 then
+     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(54, 20, -175)
+     game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.zero
+   end
+    end
+ end    
+})
+
 Tab:AddTextbox({
 	Name = "Silent Cmds",
 	Default = "",
@@ -2645,10 +2659,52 @@ Tab:AddButton({
 })
 
 Tab:AddButton({
- Name = "Anti jump block",
+ Name = "Get Mini Uzumaki",
  Callback = function()
-        while true do
-  task.wait()
+local toolBl = {"Divine Dog", "Shutter Doors", "Cursed Technique Red", "Maximum Uzumaki", "Technique Pull", "Cleave", "Dismantle", "Imaginary Technique Purple", "Pachinko Ball", "Gojo", "Dismantle", "Maximum Reversal Red", "Maximum Lapse blue"}
+        game:GetService("ReplicatedStorage").Picked:FireServer("Yuta Okkotsu")
+       repeat wait() until game.Players.LocalPlayer.Backpack:FindFirstChild("Mimicry")
+     repeat wait(0.15)
+game:GetService("Players").LocalPlayer.Backpack.Mimicry.Script.Event:FireServer()
+     until game.Players.LocalPlayer.Backpack:FindFirstChild("Mini Uzumaki")
+        for _, tool in ipairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
+          if tool:IsA("Tool") and table.find(toolBl, tool.Name) then
+  tool:Destroy()
+          end
+        end
+   end    
+})
+
+local partor = Instance.new("Part", workspace)
+partor.Transparency = 0.7
+partor.Anchored = true
+partor.CanCollide = false
+partor.CanTouch = false
+partor.Size = Vector3.new(50, 50, 50)
+partor.Position = Vector3.new(-828, -30, -67)
+
+partor.Touched:Connect(function(hit)
+ local humanoid = hit.Parent:FindFirstChildOfClass("Humanoid")
+  if humanoid and humanoid.Parent == game.Players.LocalPlayer.Character then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(54, 20, -175)
+game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.zero
+  end
+end)
+
+Tab:AddToggle({
+ Name = "Anti Prison Realm",
+ Default = false,
+ Callback = function(Value)
+    partor.CanTouch = Value
+ end    
+})
+
+Tab:AddToggle({
+ Name = "Anti jump block",
+ Default = false,
+ Callback = function(Value)
+huhy = Value
+        while huhy and game:GetService("RunService").Heartbeat:Wait() do
 local Player = game.Players.LocalPlayer
 local Character = Player.Character or Player.CharacterAdded:Wait()
 Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, true)
@@ -2682,8 +2738,8 @@ local char = plr.Character
 Tab:AddButton({
  Name = "Anti reclining v2",
  Callback = function()
-        while true do
-   task.wait()
+gyy = Value
+        while gyy and game:GetService("RunService").Heartbeat:Wait() do
 speaker = game.Players.LocalPlayer
 for i,v in pairs(speaker.Character:GetDescendants()) do
   if v:IsA("BodyVelocity") or v:IsA("BodyGyro") or v:IsA("RocketPropulsion") or v:IsA("BodyThrust") or v:IsA("BodyAngularVelocity") or v:IsA("AngularVelocity") or v:IsA("BodyForce") or v:IsA("VectorForce") or v:IsA("LineForce") then
@@ -2943,11 +2999,12 @@ workspace.CurrentCamera:remove()
    end    
 })
 
-Tab:AddButton({
+Tab:AddToggle({
  Name = "Auto Defrost",
- Callback = function()
-        while true do
-  wait()
+ Default = false,
+ Callback = function(Value)
+hjyg = Value
+        while hjyg and wait() do
 for i, v in pairs(game:GetService("Players"):GetPlayers()) do
    task.spawn(function()
     for i, x in next, v.Character:GetDescendants() do
